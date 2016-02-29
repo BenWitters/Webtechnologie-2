@@ -1,0 +1,88 @@
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/356112/splitshire.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    font-size: 3em;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    color: darkmagenta;
+    border: 5px solid black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-content: space-around;
+    height: 20vh;
+    padding-left: 15px;
+    margin-bottom: 35px;
+}
+
+nav ul li {
+    margin-bottom: 7px;
+}
+
+nav ul li a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+}
+
+#albums{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 35px;
+    padding-left: 15px;
+
+}
+
+#albums ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#albums ul li {
+    text-align: center;
+    margin-top: 25px;
+}
+
+#albums ul li h2{
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+@media (min-width: 700px) {
+    .logo{
+        width: 280px;
+
+    }
+    nav ul {
+        height: 100px;
+        margin: 0px;
+        padding: 0px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: space-around;
+        padding-right: 20px;
+    }
+    nav ul li a{
+        padding: 10px;
+    }
+    #albums ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
