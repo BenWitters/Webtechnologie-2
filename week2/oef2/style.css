@@ -1,0 +1,38 @@
+    nav{
+        margin-top: 1em;
+        font-size: 2em;
+        background-color: yellow;
+
+    }
+
+    nav > ul{ /*enkel eerste element dat in de nav zit*/
+        height: 20vh; /*vh bv 100 = volledig scherm*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        /*flex-direction: column;*/ /*mobile, row als desktop*/
+        align-items: center;
+    }
+    /*justyfy content wat moet er geberuen:
+    ruimte verdelen tusen elementen: space between, space around
+    */
+    .logo{
+       /* align-self: flex-start;*/
+        /*logo in het midden krijgen -> vologorde omdraairen: order(z-index*/
+        order: 3; /*element 3e zetten (allem elementen order geven*/
+    }
+    .link2{
+        order: 1;
+    }
+    .link3{
+        order: 2;
+    }
+    .link4{
+        order: 4;
+    }
+    .link5{
+        order: 5;
+    }
+
+    /*align content: blok bv centreren in het midden*/
+    /*hoe moeten elementen eruit zien als er meer plek is*/
