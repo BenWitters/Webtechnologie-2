@@ -1,0 +1,106 @@
+body{
+    background: url("http://cdn-static.denofgeek.com/sites/denofgeek/files/5/89//marvel.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+#row1 h2{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 180px;
+    padding: 20px;
+    color: yellow;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+#row1 h3{
+    position: absolute;
+    top: 205px;
+    padding: 20px;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#row2 h2{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 415px;
+    padding: 20px;
+    color: yellow;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+#row2 h3{
+    position: absolute;
+    top: 440px;
+    padding: 20px;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#row3 h2{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 660px;
+    padding: 20px;
+    color: yellow;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+#row3 h3{
+    position: absolute;
+    top: 680px;
+    padding: 20px;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+
+#container{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#row1 ul{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+#row1 ul li img{
+    width: 600px;
+    padding: 5px;
+    height: 200px;
+}
+
+#row2 ul{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#row2 ul li img{
+    width: 300px;
+    padding: 5px;
+    height: 200px;
+}
+#row3 ul{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#row3 ul li img{
+    width: 400px;
+    padding: 5px;
+    height: 200px;
+}
