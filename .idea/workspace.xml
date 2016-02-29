@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8efcc230-4dcf-4180-9b2e-45d10431acab" name="Default" comment="">
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week2/Marvel/css/style.css" afterPath="$PROJECT_DIR$/week2/Marvel/css/style.css" />
+>>>>>>> week2
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Webtechnologie-2.iws" />
@@ -30,8 +34,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/week2/Marvel/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.8679578" vertical-offset="663" max-vertical-offset="1394">
               <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+=======
+            <state vertical-scroll-proportion="-32.692307" vertical-offset="306" max-vertical-offset="1394">
+              <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+>>>>>>> week2
               <folding />
             </state>
           </provider>
@@ -40,8 +49,13 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week2/Marvel/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
               <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+=======
+            <state vertical-scroll-proportion="0.74242425" vertical-offset="1293" max-vertical-offset="1887">
+              <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+>>>>>>> week2
               <folding />
             </state>
           </provider>
@@ -235,16 +249,26 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/week2/Marvel/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="-32.692307" vertical-offset="306" max-vertical-offset="1394">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+>>>>>>> week2
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/week2/Marvel/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.8679578" vertical-offset="663" max-vertical-offset="1394">
           <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+=======
+        <state vertical-scroll-proportion="0.74242425" vertical-offset="1293" max-vertical-offset="1887">
+          <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+>>>>>>> week2
           <folding />
         </state>
       </provider>
