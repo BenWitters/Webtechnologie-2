@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Todo</title>
+</head>
+<body>
+<h1></h1>
+<ul>
+    <li id="todo1">Learn more about js</li>
+    <li id="todo2">code app in PHP</li>
+</ul>
+    <script src="framework.js"></script>
+    <script>
+
+        $("#todo1").css("color", "red").on("click", function(){ // on click anonieme functie // chaining
+            $(this).markAsDone(); // gaat in dom naar this zoeken
+        });
+
+    </script>
+</body>
+</html>
