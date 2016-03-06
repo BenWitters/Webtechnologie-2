@@ -18,9 +18,17 @@ var WrapperElement = function(element)
     }
 };
 
-WrapperElement.prototype.toggleClass = function(className)
-{
-    
+WrapperElement.prototype.toggleClass = function(className) {
+
+	if(this.isArray){
+		for(var i = 0; i < this.element.length; i++){
+			this.element[i].classList.toggle(className);
+		}
+	}else{
+		this.element.classList.toggle(className);
+
+	}
+	return this;
 };
 
 WrapperElement.prototype.addClass = function(className)
@@ -36,43 +44,63 @@ WrapperElement.prototype.addClass = function(className)
 	else
 	{
         // just one element, so we can manipulate it without looping
-		this.element.className = className;
+		this.element[0].className = className;
 	}
     // return the original WrapperElement, so that we can chain multiple functions like $("li").addClass("test").toggleClass("something");
-	return this;
-}
+	return this.element;
+};
 
 WrapperElement.prototype.prepend = function(item)
 {
+	if(this.isArray){
+		for(var i = 0; i<this.element.length; i++){
+			this.element[i].appendChild(item);
+		}
+	}else{
+		this.element[0].appendChild(item);
 
-}
+	}
+	return this.element;
+};
 
 WrapperElement.prototype.keyup = function(action){
-	if(this.isArray)
-	{
+	if(this.isArray) {
 		// multiple elements, we'll need to loop
 		for(var i = 0; i<this.element.length; i++)
 		{
 			this.element[i].addEventListener('keyup', action);
 		}
-	}
-	else
-	{
+	} else {
 		// just one element, let's go nuts
-		this.element.addEventListener('keyup', action);
+		this.element[0].addEventListener('keyup', action);
 	}
 	return this;
-}
+};
 
-WrapperElement.prototype.click = function(action)
-{
+WrapperElement.prototype.click = function(action) {
 
-}
+	if(this.isArray){
 
-WrapperElement.prototype.val = function(value)
-{
-	
-}
+		for(var i = 0; i < this.element.length; i++){
+			this.element[i].addEventListener('click', action);
+		}
+	}else{
+		this.element[0].addEventListener('click', action);
+	}
+	return this;
+};
+
+WrapperElement.prototype.val = function(input) {
+	if(this.isArray){
+
+		for(var i = 0; i < this.element.length; i++){
+			return this.element[i].value;
+		}
+	}else{
+		return this.element.value;
+	}
+	return this;
+};
 
 var $ = function(selector)
 {
@@ -85,4 +113,4 @@ var $ = function(selector)
     var selectedItems = document.querySelectorAll(selector);
 	var newElement = new WrapperElement(selectedItems);
 	return newElement;
-}
+};
