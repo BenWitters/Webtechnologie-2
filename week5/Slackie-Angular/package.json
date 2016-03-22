@@ -1,0 +1,19 @@
+{
+    "name": "angularDemo",
+    "version": "0.0.1",
+    "description": "angularDemo",
+    "main": "development/index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "./start.sh"
+    },
+    "author": "Nicola Nauwynck",
+    "license": "ISC",
+    "devDependencies": {
+        "gulp": "^3.8.10",
+        "gulp-webserver": "^0.8.7",
+        "gulp-jshint": "^1.9.0",
+        "jshint-stylish": "^1.0.0",
+        "wiredep": "^2.1.0"
+    }
+}

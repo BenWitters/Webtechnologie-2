@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html data-ng-app="helloAngular" class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/app/bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <link href="assets/style.css" rel="stylesheet">
+    <base href="/">
+</head>
+<!-- controller op body -->
+<body ng-controller="homeController" layout="column" layout-fill ng-cloak>
+    <md-content layout="column" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left">
+            <md-toolbar>
+                <h2 class="md-toolbar-tools">Rooms</h2>
+            </md-toolbar>
+            <md-content>
+                <md-list-item ng-repeat="room in data.rooms" ng-click="toggleRoom(room)">
+                    <p> {{ room }} </p>
+                </md-list-item>
+            </md-content>
+            <md-toolbar>
+                <h2 class="md-toolbar-tools">User</h2>
+            </md-toolbar>
+            <md-content>
+                <md-list-item>
+                    <md-input-container class="md-icon-float md-block">
+                        <label>Username</label>
+                        <md-icon aria-label="Username" class="material-icons">person</md-icon>
+                        <input type="text" ng-model="dataService.name">
+                    </md-input-container>
+                </md-list-item>
+            </md-content>
+        </md-sidenav>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <!--  ng-click : toon nav-->
+                <md-button class="md-icon-button" ng-click="toggleLeftNav()">
+                    <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+                </md-button>
+                <h1>Slackie</h1>
+            </div>
+        </md-toolbar>
+        <md-content id="content" layout="column">
+            <div class="md-padding" ng-if="!dataService || dataService.room === ''">
+                <h2 class="md-title">Welcome!</h2>
+                <p>Please select a room</p>
+            </div>
+            <div flex layout="column" ng-if="dataService && dataService.room !== ''">
+                <md-list>
+                    <md-list-item class="md-3-line" ng-repeat="message in data.messages">
+                        <img ng-src="{{dataService.getAvatar(message.Name)}}" class="md-avatar" alt="{{message.Name}}">
+                        <div class="md-list-item-text" layout="column">
+                            <h3>{{message.Name}}</h3>
+                            <h4>{{message.Content}}</h4>
+                            <p>{{message.Timestamp | date:'medium'}}</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </md-content>
+        <footer ng-if="dataService && dataService.room !== ''">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Message</label>
+                <input ng-model="data.message">
+            </md-input-container>
+            <md-button class="md-icon-button" ng-click="sendMessage()">
+                <md-icon aria-label="Send" class="material-icons">send</md-icon>
+            </md-button>
+        </footer>
+    </md-content>
+    <!-- build:js -->
+    <!-- THESE BOWER COMPONENTS ARE LOADED AUTOMATICALLY -->
+    <!-- bower:js -->
+    <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="app/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="app/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="app/bower_components/angular-material/angular-material.js"></script>
+    <!-- endbower -->
+    <!--
+        Include app-specific scrips, everything starts at app.module.js
+        -->
+    <script src="app/app.module.js"></script>
+    <!--
+        Controllers
+        -->
+    <script src="app/components/home/homeController.js"></script>
+    <!--
+        Factories
+        -->
+    <script src="app/factories/dataFactory.js"></script>
+    <!--
+        Services
+        -->
+    <script src="app/services/dataService.js"></script>
+    <!--
+        Directives
+        -->
+    <script src="app/directives/message.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
