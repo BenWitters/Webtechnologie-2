@@ -60,3 +60,14 @@ function deleteMessage(req, res){
     });
 }
 module.exports.deleteMessage = deleteMessage;
+
+// get userId
+function getUserId(req, res){
+    Message.find(req.body, function(err,message){// zoeken in database
+        var mess = new Message({
+                user: req.params.user
+        });
+        res.send(mess);
+    });
+}
+module.exports.getUserId = getUserId;

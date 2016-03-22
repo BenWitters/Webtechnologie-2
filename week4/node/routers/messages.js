@@ -9,4 +9,5 @@ router.get('/:id', controller.getId);
 router.post('/', controller.create); // doorsturen // verwijst naar module.export
 router.put('/:id', controller.updateMessage);
 router.delete('/:id', controller.deleteMessage);
+router.get('/users/:id', controller.getUserId);
 module.exports = router;// router openstellen naar index file, wat publiek toegankelijk maken -> routers moeten terugkomen
