@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-app ng-controller="LoginController">
+    <!-- ng-app: angular app, elke app moet ook een controllerhebben (ng-controller: voorziet de logica-->
+    <p>
+        hello {{user}}
+    </p>
+    <!-- bebind aan user -->
+    <input ng-model="user" type="text"/>
+    <!-- klik events opvangen -->
+    <input ng-click="login()" type="submit" value="login"/>
+
+    <!-- ng repeat loopt over de gebruikers die we hebben -->
+    <div ng-repeat="user in users">
+        {{users}}
+    </div>
+
+</div>
+<script>
+// input box tonen en input weergeven in HTML
+// $scope, prefix, standaard in angular
+function LoginController($scope) {
+    // user die we willen ingeven is een lege string
+    $scope.user = "world";
+    // user toevoegen aan de array
+    $scope.users = [];
+    $scope.login = function () {
+        // user in array users steken, toeveogen
+        $scope.users.push($scope.user);
+        $scope.user = "";
+    }
+}
+</script>
+</body>
+</html>
