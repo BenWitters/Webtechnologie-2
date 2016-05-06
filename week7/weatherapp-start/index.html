@@ -1,35 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Weather</title>
-	<style>
-        body{
-            background-color: #3397ff;
-            color: white;
-            font-family: helvetica;
-        }
-        
-        .weather{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
+    <meta charset="UTF-8">
+    <title>Weer app</title>
 
-
-    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-	
-	<div class="weather">
-		<div><canvas id="weather-icon" width="200" height="200"></canvas></div>
-        <h1 class="weather-temperature"></h1>
-		<h1 class="weather-summary"></h1>
-	</div>
+<div class="wrapper">
+        <div class="weather-app">
+            <h3 id="location"> </h3>
+            <div class="weather-app-today">
+                <div class="weather-app-today-left">
+                    <p class="weather-summary"></p>
+                    <h4 class="weather-temperature"></h4>
+                </div>
+                <div class="weather-app-today-right">
+                    <canvas id="weather-icon" width="80" height="80">
+                    </canvas>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="weather-app-daily">
+                <ul>
+                    <li class="day1"><span></span></li>
+                    <li class="day1Temp"><canvas id="day1Icon" width="18" height="18"></canvas></li>
+                </ul>
+                <ul>
+                    <li class="day2"><span>22/05</span></li>
+                    <li class="day2Temp"><canvas id="fog" width="18" height="18"></canvas></li>
+                </ul>
+                <ul>
+                    <li class="day3">Tue <span>23/05</span></li>
+                    <li class="day3Temp"><canvas id="clear-day" width="18" height="18"></canvas></li>
+                </ul>
+                <ul>
+                    <li class="day4" >Wed <span>24/05</span></li>
+                    <li class="day4Temp"><canvas id="partly-cloudy-night" width="18" height="18"></canvas></li>
+                </ul>
+                <ul>
+                    <li class="day5" >Thu <span>25/05</span></li>
+                    <li class="day5Temp"><canvas id="rain" width="18" height="18"></canvas></li>
+                </ul>
+                <ul>
+                    <li class="day6" >Fri <span>26/05</span></li>
+                    <li class="day6Temp"><canvas id="snow" width="18" height="18"></canvas></li>
+                </ul>
+            </div>
+        </div>
+</div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script src="js/skycons.js"></script>
+    <script src="js/start.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script>
 
-	<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-	<script src="js/skycons.js"></script>
-	<script src="js/start.js"></script>
-    <script></script>
+        var today = moment();
+        var format = 'ddd D MMM';
+
+
+        $('.day1').text(moment().add(1, 'day').format(format));
+        $('.day2').text(moment().add(2, 'day').format(format));
+        $('.day3').text(moment().add(3, 'day').format(format));
+        $('.day4').text(moment().add(4, 'day').format(format));
+        $('.day5').text(moment().add(5, 'day').format(format));
+        $('.day6').text(moment().add(6, 'day').format(format));
+    </script>
 </body>
 </html>

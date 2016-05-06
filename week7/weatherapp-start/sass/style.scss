@@ -1,0 +1,84 @@
+@import "base";
+$blue: #00bcd4;
+
+html{
+  background-color: #f2f2f2;
+}
+
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.weather-app{
+  float:left;
+  width: 100%;
+  h3{
+    padding: 5px;
+    background: $blue;
+    color: #fff;
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.weather-app-today {
+  background: #3a4046;
+  padding: 15px 60px;
+}
+
+.weather-app-today-left {
+  float: left;
+  p{
+    font-size: 2rem;
+    color:#fff;
+  }
+  h4{
+    font-size: 3em;
+    color: #fff;
+    letter-spacing: 4px;
+  }
+}
+
+.weather-app-today-right {
+  float: right;
+}
+
+.weather-app-daily{
+  background:#fff;
+  ul{
+    padding: 1em 1.5em;
+    border-bottom:1px solid #e2e2e2;
+  }
+  ul li{
+    display:inline-block;
+    font-size: 1.2rem;
+    color: $blue;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  ul li span{
+    color: #979797;
+    padding-left:.5em;
+  }
+  ul li:nth-child(2){
+    float: right;
+  }
+  ul:last-child{
+    border-bottom:none;
+
+  }
+}
+
+.clearfix{
+  clear:both;
+}
+
+
+@media (min-width: 768px) {
+  .wrapper{
+    width: 50%;
+  }
+}

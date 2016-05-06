@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: #CCC;
+        }
+        .btn{
+            color: #777;
+            margin: 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            display: inline-block; /* kunnen nog elementen naast */
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn:active{
+            position: relative;
+            top: 2px;
+        }
+
+        .btn__price{
+            background-color: #000;
+            color: #ffffff;
+            padding : 3px 5px;
+            border-radius: 3px 0 0 3px;
+            opacity: 0.5;
+        }
+
+        .btn__text{
+            color: #777;
+        }
+
+        .btn--xl{
+            font-size: 1.5em;
+        }
+
+        .btn--primary{
+            background-color: tomato;
+
+        }
+        /*nesten als je een modifier hebt waar elementen er anders uit zien*/
+        .btn--primary .btn__text{
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a class="btn" href="#">
+        <span class="btn__price">5 €</span> <!-- hoort bij btn __hier komt een element-->
+        <span class="btn__text">Buy now!</span>
+    </a>
+
+    <a class="btn btn--primary" href="#"> <!-- -- = modifier -->
+        <span class="btn__price">5 €</span> <!-- hoort bij btn __hier komt een element-->
+        <span class="btn__text">Buy now!</span>
+    </a>
+
+    <a class="btn btn--primary btn--xl" href="#">
+        <span class="btn__price">5 €</span> <!-- hoort bij btn __hier komt een element-->
+        <span class="btn__text">Buy now!</span>
+    </a>
+</body>
+</html>

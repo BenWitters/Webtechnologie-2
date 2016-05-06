@@ -1,0 +1,40 @@
+.gallery{
+  @include display(flex);
+
+}
+.poster{
+  height: 350px;
+  width: 200px;
+  background-color: $mine-shaft;
+  font-family: $font-modern;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster__title{
+  /*oproepen van mixins*/
+  @include rem(2);
+  color: $shiraz;
+  text-transform: uppercase;
+
+}
+
+.poster__subtitle{
+  color: lighten($mine-shaft, 20%);
+  text-transform: uppercase;
+
+}
+
+.poster--light{
+  background: #CCC;
+}
+/*nesten van tags*/
+nav{
+  ul{
+    li{
+
+    }
+  }
+}
